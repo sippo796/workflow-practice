@@ -7,6 +7,15 @@ on:
         default: Hello # 入力パラメータのデフォルト値
         required: true # 入力パラメータの必須フラグ
         description: A cheerful word # 入力パラメータの概要
+      log-level:
+        type: choice # データ型
+        default: info # 入力パラメータのデフォルト値
+        required: true # 入力パラメータの必須フラグ
+        description: The log level # 入力パラメータの概要
+        options: # 選択肢
+          - info
+          - warning
+          - error
 
 jobs:
   run:
