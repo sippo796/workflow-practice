@@ -1,0 +1,11 @@
+name: Context
+on: push
+jobs:
+  print:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "The event name is ${{ github.event_name }}"
+      - run: echo "The repository name is ${{ github.repository }}"
+      - run: echo "The repository owner is ${{ github.repository_owner }}"
+      - run: echo "The ref is ${{ github.ref }}"
+      - run: echo "The actor is ${{ github.actor }}"
