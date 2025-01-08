@@ -7,6 +7,7 @@ jobs:
       BRANCH: main
       OVERRIDE: take one
       ACTOR: ${{ github.actor }}
+      USERNAME: ${{vars.USERNAME}}
     steps:
       - run: echo "${{ env.BRANCH }}" # 環境変数の参照
       - uses: actions/checkout@v4
@@ -22,5 +23,6 @@ jobs:
       - run: echo ${ACTOR}
       - run: echo "${ACTOR}"
       - run: echo "${{ env.ACTOR }}"
+      - run: echo "${{ env.USERNAME }}"
 
       
