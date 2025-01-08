@@ -6,7 +6,7 @@ jobs:
     env: # 環境変数の定義
       BRANCH: main
     steps:
-      - run: echo "The branch is ${BRANCH}" # 環境変数の参照
+      - run: echo "${BRANCH}" # 環境変数の参照
       - uses: actions/checkout@v4
         with: 
           ref: ${{ env.BRANCH }}
