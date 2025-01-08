@@ -16,6 +16,8 @@ jobs:
           OVERRIDE: take two
         run: echo "${{ env.OVERRIDE }}"
       - run: echo "$GITHUB_ACTOR" # GitHub提供の環境変数の参照
+        shell: bash
       - run: echo "${{ github.action }}" # GitHub提供の環境変数の参照
       - run: echo "${{ github.actor }}" # GitHub提供の環境変数の参照
+      - run: echo "${ACTOR}"
       
