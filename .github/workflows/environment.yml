@@ -20,4 +20,7 @@ jobs:
       - run: echo "${{ github.action }}" # GitHub提供の環境変数の参照
       - run: echo "${{ github.actor }}" # GitHub提供の環境変数の参照
       - run: echo ${ACTOR}
+      - run: echo "${ACTOR}"
+      - run: echo "${{ env.ACTOR }}"
+
       
